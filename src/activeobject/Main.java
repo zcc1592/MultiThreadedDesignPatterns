@@ -14,5 +14,6 @@ public class Main {
         new MarkerClientThread("Alice", activeObject).start();
         new MarkerClientThread("Bobby", activeObject).start();
         new DisplayClientThread("Chris", activeObject).start();
+        new AddClientThread("Diana", activeObject).start();
     }
 }

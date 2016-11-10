@@ -25,4 +25,11 @@ public class Proxy implements ActiveObject {
     public void displayString(String string) {
         scheduler.invoke(new DisplayStringRequest(servant, string));
     }
+
+    @Override
+    public Result add(String x, String y) {
+        FutureResult future = new FutureResult();
+        scheduler.invoke(new AddRequest(servant, future, x, y));
+        return future;
+    }
 }

@@ -1,5 +1,7 @@
 package activeobject.activeobject;
 
+import java.math.BigInteger;
+
 /**
  * @Author: Jack
  * @Time: 2016-11-05 17:19
@@ -27,5 +29,19 @@ public class Servant implements ActiveObject{
         } catch (InterruptedException e) {
 
         }
+    }
+
+    @Override
+    public Result add(String x, String y) {
+        String value = null;
+        try{
+            BigInteger bigIntegerX = new BigInteger(x);
+            BigInteger bigIntegerY = new BigInteger(y);
+            value = bigIntegerX.add(bigIntegerY).toString();
+        }catch (NumberFormatException e){
+
+        }
+
+        return new RealResult(value);
     }
 }
