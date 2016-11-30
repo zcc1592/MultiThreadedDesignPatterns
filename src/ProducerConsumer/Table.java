@@ -19,7 +19,7 @@ public class Table {
 
     public synchronized void put(String cake) throws InterruptedException{
         System.out.println(Thread.currentThread().getName() + " put " + cake);
-        if(count >= buffer.length){
+        while(count >= buffer.length){
             wait();
         }
         buffer[tail] = cake;
