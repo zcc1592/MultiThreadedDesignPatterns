@@ -3,7 +3,7 @@ package activeobject;
 import activeobject.activeobject.ActiveObject;
 import activeobject.activeobject.Result;
 
-/**
+/** AddClientThread
  * @Author: Jack
  * @Time: 2016-11-10 16:01
  */
